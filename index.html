@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Škoda</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<nav id="header">
+    <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+            <span></span>
+        </label>
+        <ul class="menu__box">
+            <li><a class="menu__item" href="#">Škoda</a></li>
+            <li><a class="menu__item" href="#">Модельний ряд</a></li>
+            <li><a class="menu__item" href="#">Кредит під 0%</a></li>
+            <li><a class="menu__item" href="#">Контакти</a></li>
+        </ul>
+    </div>
+    <img src="skoda_logo2.png" id="headerLogo">
+    <div id="skoda_name"><span>Š</span><span>K</span><span>O</span><span>D</span><span>A</span></div>
+</nav>
+<div class="imgBlock">
+    <img src="OCTAVIA1.jpg" id="oct1" alt="">
+    <p
+            class="on_image_model">New Octavia
+    </p>
+    <div class="snaky_animation">
+        <div class="snaky_animation_line"></div>
+    </div>
+
+</div>
+<div class="modelSlideshow">
+    <div class="modelSlide fade">
+        <div id="textModelBlock1" class="container-fluid">
+            <span class="smallTextModelBlock">Новітня версія бестселера</span>
+            <span class="headerTextModelBlock">NEW OCTAVIA</span>
+        </div>
+        <div class="pictureBlock">
+            <img src="OCTAVIA-small.bin" class="octModel">
+            <div class="bySideText">
+                <span class="bySideSpan">Просторе сімейне авто</span>
+                <p class="bySideP">Максимум місця і комфорту. Де б ви не знаходилися</p>
+            </div>
+        </div>
+    </div>
+    <div class="modelSlide fade">
+        <div id="textModelBlock2" class="container-fluid">
+            <span class="smallTextModelBlock">Новітня версія бестселера</span>
+            <span class="headerTextModelBlock">NEW OCTAVIA COMBI</span>
+        </div>
+        <div class="pictureBlock">
+            <img src="OCTAVIA-COMBI-small.bin" class="octModel">
+            <div class="bySideText">
+                <span class="bySideSpan">Просторе сімейне авто</span>
+                <p class="bySideP">Максимум місця і комфорту. Де б ви не знаходилися</p>
+            </div>
+        </div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+
+</div>
+<br>
+
+<div class="underModelButtons">
+    <a class="testDriveButton"><span>Тест-драйв</span></a>
+    <a class="configuratorButton"><span>Конфігуратор</span></a>
+</div>
+<!--<div id="div1"></div>-->
+
+<!--<video controls preload="metadata">
+    <source src="logo.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+</video>-->
+<!--<div class="navMenu">
+    <input type="checkbox" id="nav-toggle" hidden>
+    <nav class="topMenu">
+        <label for="nav-toggle" class="nav-toggle" onclick>
+&lt;!&ndash;            <img src="MenuIcon96.png" class="menuPng">&ndash;&gt;
+        </label>
+
+        <ul class="UL">
+            <li class="LI">Модельний ряд</li>
+        </ul>
+
+&lt;!&ndash;        <img src="MenuIcon96.png" class="menuPng">&ndash;&gt;
+    </nav>
+</div>-->
+
+<script src="skoda.js"></script>
+</body>
+</html>
