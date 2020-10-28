@@ -1,6 +1,12 @@
 var slideIndex = 1;
 showSlides(slideIndex);
 
+window.onload = function () {
+    window.setTimeout(function () {
+        document.body.classList.add('loaded');
+    }, 2500);
+}
+
 function plusSlides(n) {
     showSlides(slideIndex += n);
 }
