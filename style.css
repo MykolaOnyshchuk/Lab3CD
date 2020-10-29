@@ -208,8 +208,8 @@ li:hover {
 }
 
 #oct1 {
+    margin-top: 70px;
     width: 100%;
-    display: grid;
 }
 
 #div1 {
@@ -232,7 +232,7 @@ li:hover {
 
 .imgBlock p {
     /*background: rgba(0,0,0,0.7); (полупрозрачность)*/
-    font: normal small-caps 6.5em "Franklin Gothic Medium", serif;
+    font: normal small-caps 6.75vw "Franklin Gothic Medium", serif;
     color: white;
     position: absolute;
     bottom: 8%;
@@ -241,10 +241,10 @@ li:hover {
 }
 
 .snaky_animation {
-    width: 490px;
+    width: 33%;
     height: 100%;
     bottom: 0px;
-    right: 4.7%;
+    right: 4.4%;
     position: absolute;
 
 }
@@ -305,6 +305,20 @@ li:hover {
         margin: 0 auto;
         display: block;
         top: 0;
+    }
+}
+
+@media(max-width: 773px) {
+    .octModel {
+        height: auto;
+        width: 80%;
+        margin: 0 auto;
+        display: block;
+        top: 0;
+    }
+
+    .bySideText {
+        display: none;
     }
 }
 
