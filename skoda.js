@@ -1,5 +1,6 @@
-var slideIndex = 1;
-showSlides(slideIndex);
+let slideIndex = 1;
+showSlides(slideIndex, "modelSlide", "dot");
+showSlides(slideIndex,"complectationSlide", "complectationSwitch");
 
 window.onload = function () {
     window.setTimeout(function () {
@@ -8,17 +9,17 @@ window.onload = function () {
 }
 
 function plusSlides(n) {
-    showSlides(slideIndex += n);
+    showSlides(slideIndex += n, "modelSlide", "dot");
 }
 
-function currentSlide(n) {
-    showSlides(slideIndex = n);
+function currentSlide(n, slide, switcher) {
+    showSlides(slideIndex = n, slide, switcher);
 }
 
-function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("modelSlide");
-    var dots = document.getElementsByClassName("dot");
+function showSlides(n, slide, switcher) {
+    let i;
+    let slides = document.getElementsByClassName(slide);
+    let dots = document.getElementsByClassName(switcher);
     if (n > slides.length) {slideIndex = 1}
     if (n < 1) {slideIndex = slides.length}
     for (i = 0; i < slides.length; i++) {
