@@ -642,6 +642,106 @@ li {
     border-right-style: solid;
 }
 
+.stickyButtons {
+    position: fixed;
+    z-index: 6;
+    display: inline-block;
+    width: 100%;
+    height: 200px;
+    bottom: 20%;
+
+}
+
+.stickyButtonsBlock {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    width: 100%;
+    height: 100%;
+}
+
+.stickyButtonsCover {
+    position: absolute;
+    height: 100%;
+    width: 60px;
+    right: 5%;
+    animation-name: widenOff;
+    animation-timing-function: ease;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+}
+
+.stickyButtonsCover:hover {
+    animation-name: widen;
+    animation-timing-function: ease;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+}
+
+.stickyButtonsEl {
+    position: absolute;
+    height: 60px;
+    width: 100%;
+    background-color: forestgreen;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    overflow: hidden;
+    border-style: hidden;
+    border-width: 1px;
+    border-color: forestgreen;
+    border-radius: 30px;
+    white-space: nowrap;
+    cursor: pointer;
+    color: white;
+    font: normal small-caps 1em "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+#stickyButtonsEl1 {
+    bottom: 140px;
+}
+
+#stickyButtonsEl2 {
+    bottom: 70px;
+}
+
+#stickyButtonsEl3 {
+    bottom: 0px;
+}
+
+#stickyButtonsImg1 {
+    padding: 7px;
+    padding-right: 10px;
+}
+
+#stickyButtonsImg2 {
+    padding: 15px;
+}
+
+#stickyButtonsImg3 {
+    padding: 7px;
+}
+
+@keyframes widen {
+    0% {
+        width: 60px;
+    }
+    100% {
+        width: 300px;
+    }
+}
+
+@keyframes widenOff {
+    0% {
+        width: 300px;
+    }
+    100% {
+        width: 60px;
+    }
+}
+
 /*
 
 
