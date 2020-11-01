@@ -55,14 +55,12 @@ body {
     font: normal small-caps 6.7em "Franklin Gothic Medium", serif;
 }
 
-/* скрываем чекбокс */
 #menu__toggle {
     opacity: 0;
 }
-/* стилизуем кнопку */
 .menu__btn {
-    display: flex; /* используем flex для центрирования содержимого */
-    align-items: center;  /* центрируем содержимое кнопки */
+    display: flex;
+    align-items: center;
     position: fixed;
     top: 20px;
     left: 20px;
@@ -71,7 +69,6 @@ body {
     cursor: pointer;
     z-index: 1;
 }
-/* добавляем "гамбургер" */
 .menu__btn > span,
 .menu__btn > span::before,
 .menu__btn > span::after {
@@ -90,7 +87,6 @@ body {
     top: 8px;
 }
 
-/* контейнер меню */
 .menu__box {
     display: block;
     position: fixed;
@@ -106,7 +102,6 @@ body {
     background-color: white;
     box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
 }
-/* элементы меню */
 .menu__item {
     display: block;
     padding: 12px 24px;
@@ -224,7 +219,6 @@ body {
 }
 
 .imgBlock p {
-    /*background: rgba(0,0,0,0.7); (полупрозрачность)*/
     font: normal small-caps 6.75vw "Franklin Gothic Medium", serif;
     color: white;
     position: absolute;
@@ -313,6 +307,19 @@ body {
         display: block;
         top: 0;
     }
+
+    /*#header {
+
+    }
+
+    #headerLogo {
+        max-width: 30px;
+        height: auto;
+    }
+
+    #skoda_name {
+        font-size: 20px;
+    }*/
 
     .bySideText {
         display: none;
@@ -741,127 +748,4 @@ li {
         width: 60px;
     }
 }
-
-/*
-
-
-.menuPng {
-    width: 3%;
-    height: 3%;
-    min-width: 23px;
-    min-height: 23px;
-}
-
-.nav-toggle {
-    !* абсолютно позиционируем *!
-    position: absolute;
-    !* относительно левого края панели *!
-    left: 320px;
-    !* отступ от верхнего края панели *!
-    top: 1em;
-    !* внутренние отступы *!
-    padding: 0.5em;
-    !* определяем цвет фона переключателя
-     * чаще вчего в соответствии с цветом фона панели
-    *!
-    background: inherit;
-    !* цвет текста *!
-    color: #dadada;
-    !* вид курсора *!
-    cursor: pointer;
-    !* размер шрифта *!
-    font-size: 1.2em;
-    line-height: 1;
-    !* всегда поверх других элементов страницы *!
-    z-index: 2001;
-    !* анимируем цвет текста при наведении *!
-    -webkit-transition: color .25s ease-in-out;
-    -moz-transition: color .25s ease-in-out;
-    transition: color .25s ease-in-out;
-}
-
-.nav-toggle:after {
-    content: '\2630';
-    text-decoration: none;
-}
-
-!* цвет текста при наведении *!
-
-.nav-toggle:hover {
-    color: #f4f4f4;
-}
-
-.navMenu {
-    width: 320px;
-    min-width: 320px;
-    !* фиксируем и выставляем высоту панели на максимум *!
-    height: 100%;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    margin: 0;
-    !* сдвигаем (прячем) панель относительно левого края страницы *!
-    left: -320px;
-    !* внутренние отступы *!
-    padding: 15px 20px;
-    !* плавный переход смещения панели *!
-    -webkit-transition: left 0.3s;
-    -moz-transition: left 0.3s;
-    transition: left 0.3s;
-    !* определяем цвет фона панели *!
-    background: #16a085;
-    !* поверх других элементов *!
-    z-index: 2000;
-}
-
-[id='nav-toggle'] {
-    position: absolute;
-    display: none;
-}
-
-[id='nav-toggle']:checked ~ .navMenu {
-    left: 0;
-    box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
-    -moz-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
-    -webkit-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
-    overflow-y: auto;
-}
-
-[id='nav-toggle']:checked ~ main > article {
-    -webkit-transform: translateX(320px);
-    -moz-transform: translateX(320px);
-    transform: translateX(320px);
-}
-
-.navMenu > ul {
-    display: block;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.navMenu > ul > li {
-    line-height: 2.5;
-    opacity: 0;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-    -webkit-transition: opacity .5s .1s, -webkit-transform .5s .1s;
-    -moz-transition: opacity .5s .1s, -moz-transform .5s .1s;
-    -ms-transition: opacity .5s .1s, -ms-transform .5s .1s;
-    transition: opacity .5s .1s, transform .5s .1s;
-}
-
-[id='nav-toggle']:checked ~ .navMenu > ul > li {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0);
-}
-
-body {
-    -webkit-animation: bugfix infinite 1s;
-}*/
 
