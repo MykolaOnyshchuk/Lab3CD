@@ -297,6 +297,13 @@ body {
     .gridTable {
         grid-template-columns: 1fr 1fr 1fr;
     }
+    .complectationImg {
+        width: 774px;
+    }
+    .complectationTable {
+        width: 774px;
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media(max-width: 773px) {
@@ -332,6 +339,13 @@ body {
     .snaky_animation_line {
         height: 4px;
     }
+    .complectationImg {
+        width: 100%;
+    }
+    .complectationTable {
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media(max-width: 450px) {
@@ -340,6 +354,14 @@ body {
     }
     .snaky_animation_line {
         height: 2px;
+    }
+
+    .complectationImg {
+        width: 100%;
+    }
+    .complectationTable {
+        width: 100%;
+        grid-template-columns: 1fr;
     }
 }
 
@@ -384,18 +406,15 @@ body {
     user-select: none;
 }
 
-/* Position the "next button" to the right */
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
 }
 
-/* The dots/bullets/indicators */
 .dot {
     cursor: pointer;
     height: 8px;
@@ -411,7 +430,6 @@ body {
     background-color: #717171;
 }
 
-/* Fading animation */
 .fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
@@ -597,7 +615,6 @@ body {
 }
 
 .complectationImg {
-    max-width: 800px;
     height: auto;
     display: block;
     margin: auto;
@@ -605,11 +622,9 @@ body {
 
 .complectationTable {
     display: grid;
-    max-width: 800px;
     margin: auto;
     border-width: 1px;
     border-color: #616161;
-    grid-template-columns: 1fr 1fr;
     font: normal small-caps 1em "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
@@ -623,6 +638,7 @@ body {
     border-bottom-style: solid;
     font-weight: 400;
     font-size: 1.3em;
+    white-space: nowrap;
 }
 
 .inGridText {
