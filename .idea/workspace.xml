@@ -11,7 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="609e3b04-215c-4154-8d34-e9409701d8f2" name="Default Changelist" comment="Commit">
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,13 +40,14 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\LEGION\Documents\GitHub\Lab3CD\Images" />
       <recent name="C:\Users\LEGION\Documents\GitHub\Lab3CD" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -67,7 +68,7 @@
       <workItem from="1604229402782" duration="13541000" />
       <workItem from="1604291750503" duration="32502000" />
       <workItem from="1604685270127" duration="3667000" />
-      <workItem from="1604752600837" duration="42416000" />
+      <workItem from="1604752600837" duration="44762000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <created>1603660724890</created>
@@ -146,7 +147,21 @@
       <option name="project" value="LOCAL" />
       <updated>1604845114369</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Commit">
+      <created>1604845286882</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1604845286882</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Commit">
+      <created>1604845578182</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1604845578182</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,10 +195,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1604783747503" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1604845119257">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1604845582251">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1604845119257" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1604845582251" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1604761156660">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

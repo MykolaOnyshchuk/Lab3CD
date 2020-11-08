@@ -278,18 +278,14 @@ main {
 }
 
 #headerMenu {
-    z-index: 8;
+    z-index: 9;
 }
 .buttonMenu {
     z-index: 10;
 }
 
 .containerMenu {
-    z-index: 7;
-}
-
-.menuLi {
-    z-index: 7;
+    z-index: 8;
 }
 
 .hamburger-menu {
@@ -656,6 +652,10 @@ main {
     .parallaxImg {
         height: 80vh;
         max-height: 125vw;
+    }
+
+    .on_image_model {
+        font-size: 10em;
     }
 }
 
