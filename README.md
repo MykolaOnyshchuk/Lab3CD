@@ -1,3 +1,3 @@
 # Validation
-A page of website written as third laboratory work of Basics of client development
+Results of validation on https://validator.w3.org/
 ![GitHub Logo](/Images/Validation.png)
