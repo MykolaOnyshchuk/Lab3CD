@@ -653,10 +653,6 @@ main {
         height: 80vh;
         max-height: 125vw;
     }
-
-    .on_image_model {
-        font-size: 10em;
-    }
 }
 
 .modelSlideshow {
