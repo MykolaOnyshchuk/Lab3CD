@@ -11,8 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="609e3b04-215c-4154-8d34-e9409701d8f2" name="Default Changelist" comment="Add some functionality">
+      <change afterPath="$PROJECT_DIR$/euroNcap.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skoda.js" beforeDir="false" afterPath="$PROJECT_DIR$/skoda.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,11 +49,11 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\LEGION\Documents\GitHub\Lab3CD\Images" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\LEGION\Documents\GitHub\Lab3CD" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\LEGION\Documents\GitHub\Lab3CD\Images" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -66,7 +68,9 @@
       <workItem from="1603910621793" duration="1580000" />
       <workItem from="1603979008088" duration="22436000" />
       <workItem from="1604229402782" duration="13541000" />
-      <workItem from="1604291750503" duration="3038000" />
+      <workItem from="1604291750503" duration="32502000" />
+      <workItem from="1604685270127" duration="3667000" />
+      <workItem from="1604752600837" duration="41558000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <created>1603660724890</created>
@@ -117,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604243941768</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fix mobile adaptivity">
+      <created>1604295471393</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1604295471393</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,20 +154,25 @@
     <MESSAGE value="Add new block" />
     <MESSAGE value="Add fixed buttons" />
     <MESSAGE value="Fix some bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix some bugs" />
+    <MESSAGE value="Fix mobile adaptivity" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix mobile adaptivity" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1604243947928">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604783747503">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1604243947928" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1604239944562">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1604783747503" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1604295476415">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1604239944562" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1603910983082">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1604295476415" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1604761156660">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1603910983082" />
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1604761156660" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1604344793085">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1604344793085" />
   </component>
 </project>

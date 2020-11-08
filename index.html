@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <title>Škoda</title>
@@ -9,288 +9,371 @@
 <body class="container-fluid">
 <div class="preloader">
     <div class="preloader__row">
-        <img src="Images/skoda_logo2.png" class="preloaderLogo">
+        <img src="Images/skoda_logo2.png" class="preloaderLogo" alt="Škoda logo">
         <p class="preloaderText">ŠKODA</p>
-        <!--<div class="preloader__item"></div>
-        <div class="preloader__item"></div>-->
     </div>
 </div>
 
-<nav id="header">
-    <div class="hamburger-menu">
-        <input id="menu__toggle" type="checkbox" />
-        <label class="menu__btn" for="menu__toggle">
-            <span></span>
-        </label>
-        <ul class="menu__box">
-            <li><a class="menu__item" href="#">Škoda</a></li>
-            <li><a class="menu__item" href="#">Модельний ряд</a></li>
-            <li><a class="menu__item" href="#">Кредит під 0%</a></li>
-            <li><a class="menu__item" href="#">Контакти</a></li>
-        </ul>
-    </div>
-    <img src="Images/skoda_logo2.png" id="headerLogo">
-    <div id="skoda_name"><span>Š</span><span>K</span><span>O</span><span>D</span><span>A</span></div>
-</nav>
-<div class="imgBlock">
-    <img src="Images/OCTAVIA1.jpg" id="oct1" alt="">
-    <p
-            class="on_image_model">New Octavia
-    </p>
-    <div class="snaky_animation">
-        <div class="snaky_animation_line"></div>
-    </div>
 
+<input id="checkboxMenu" type="checkbox" />
+
+<div class="hamburger-menu">
+    <label class="buttonMenu" for="checkboxMenu">
+        <span></span>
+    </label>
+    <ul class="containerMenu">
+        <li><a class="menuLi" href="#">Škoda</a></li>
+        <li><a class="menuLi" href="#">Модельний ряд</a></li>
+        <li><a class="menuLi" href="#">Новини про компанію</a></li>
+        <li><a class="menuLi" href="#">Ціни на автомобілі</a></li>
+        <li><a class="menuLi" href="#">Журнал ŠKODA Style</a></li>
+        <li><a class="menuLi" href="#">Кредит під 0%</a></li>
+        <li><a class="menuLi" href="#">Дилерські сервісні центри</a></li>
+        <li><a class="menuLi" href="#">Контакти</a></li>
+    </ul>
 </div>
-<div class="modelSlideshow">
-    <div class="modelSlide fade">
-        <div id="textModelBlock1" class="container-fluid">
-            <span class="smallTextModelBlock">Новітня версія бестселера</span>
-            <span class="headerTextModelBlock">NEW OCTAVIA</span>
+
+<main role="main">
+
+    <article class="art1">
+        <div id="header">
+            <img src="Images/skoda_logo2.png" id="headerLogo" alt="Škoda logo">
+            <div id="skoda_name"><span>Š</span><span>K</span><span>O</span><span>D</span><span>A</span></div>
         </div>
-        <div class="pictureBlock">
-            <img src="Images/OCTAVIA-small.bin" class="octModel">
-            <div class="bySideText">
-                <span class="bySideSpan">Просторе сімейне авто</span>
-                <p class="bySideP">Максимум місця і комфорту. Де б ви не знаходилися</p>
+
+        <div class="imgBlock">
+            <img src="Images/OCTAVIA1.jpg" id="oct1" alt="Octavia">
+            <p class="on_image_model">New Octavia</p>
+            <div class="snaky_animation">
+                <div class="snaky_animation_line"></div>
+            </div>
+
+        </div>
+        <div class="modelSlideshow">
+            <div class="modelSlide fade">
+                <div id="textModelBlock1" class="container-fluid">
+                    <span class="smallTextModelBlock">Новітня версія бестселера</span>
+                    <span class="headerTextModelBlock">NEW OCTAVIA</span>
+                </div>
+                <div class="pictureBlock">
+                    <img src="Images/OCTAVIA-small.bin" class="octModel" alt="Octavia">
+                    <div class="bySideText">
+                        <span class="bySideSpan">Просторе сімейне авто</span>
+                        <p class="bySideP">Максимум впевненості і комфорту. Де б ви не знаходилися</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modelSlide fade">
+                <div id="textModelBlock2" class="container-fluid">
+                    <span class="smallTextModelBlock">Новітня версія бестселера</span>
+                    <span class="headerTextModelBlock">NEW OCTAVIA COMBI</span>
+                </div>
+                <div class="pictureBlock">
+                    <img src="Images/OCTAVIA-COMBI-small.bin" class="octModel" alt="Octavia Combi">
+                    <div class="bySideText">
+                        <span class="bySideSpan">Просторе сімейне авто</span>
+                        <p class="bySideP">Ще більше місця та практичності в кузові універсал</p>
+                    </div>
+                </div>
+            </div>
+
+            <a class="leftArrow" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="rightArrow" onclick="plusSlides(1)">&#10095;</a>
+
+            <div style="text-align:center">
+                <span class="dotSwitch" onclick="currentSlide(1, 'modelSlide', 'dotSwitch')"></span>
+                <span class="dotSwitch" onclick="currentSlide(2, 'modelSlide', 'dotSwitch')"></span>
+            </div>
+
+        </div>
+        <br>
+
+        <div class="underModelButtons">
+            <div class="testDriveButton">
+                <a class="AtestDriveButton" href="https://www.skoda-auto.ua/other/test-drive"><span>Тест-драйв</span></a>
+            </div>
+            <div class="configuratorButton">
+                <a class="AconfiguratorButton" href="#complButtons"><span>Комплектації</span></a>
             </div>
         </div>
-    </div>
-    <div class="modelSlide fade">
-        <div id="textModelBlock2" class="container-fluid">
-            <span class="smallTextModelBlock">Новітня версія бестселера</span>
-            <span class="headerTextModelBlock">NEW OCTAVIA COMBI</span>
-        </div>
-        <div class="pictureBlock">
-            <img src="Images/OCTAVIA-COMBI-small.bin" class="octModel">
-            <div class="bySideText">
-                <span class="bySideSpan">Просторе сімейне авто</span>
-                <p class="bySideP">Максимум місця і комфорту. Де б ви не знаходилися</p>
+        <br>
+
+        <p class="aboveGridText">Чому Octavia?</p>
+        <div class="gridTable">
+            <div class="whyOctaviaBlock">
+                <img src="Images/OCTAVIA-design.jpg" class="gridImg" alt="Design">
+                <p class="headerWhyOctavia">ВРАЖАЮЧИЙ ДИЗАЙН</p>
+                <p class="textWhyOctavia">OCTAVIA нового покоління стає ще більшою, і завдяки кузову, що нагадує елегантне купе, ще більш захоплюючою і динамічною, ніж будь-коли раніше. Кожна деталь випромінює впевненість непідвладну часу і еталонну якість, куди б ви не вирушали.</p>
+            </div>
+            <div class="whyOctaviaBlock">
+                <img src="Images/OCTAVIA-interior.jpg" class="gridImg" alt="Interior">
+                <p class="headerWhyOctavia">СУЧАСНИЙ ІНТЕР'ЄР</p>
+                <p class="textWhyOctavia">Ласкаво просимо в салон нового покоління, який розширює межі свого класу. Основний дисплей, що проектує інформацію на лобове скло, змусить поглянути на світ по-новому. Все найважливіше розташовується на двох 10-дюймових дисплеях. Мінімалістські лінії і атмосферне підсвічування довершують елегантну витонченість салону.</p>
+            </div>
+            <div class="whyOctaviaBlock">
+                <img src="Images/OCTAVIA-comfort.jpg" class="gridImg" alt="Comfort">
+                <p class="headerWhyOctavia">НЕПЕРЕВЕРШЕНИЙ КОМФОРТ</p>
+                <p class="textWhyOctavia">Будьте впевнені, завдяки таким функціям, як ергономічні сидіння, сертифіковані AGR, і система динамічного контролю ходової частини (DCC), ви завжди будете почувати себе як після відпочинку. Безліч обладнання для вашого комфорту: від Travel Assist, для більш зручної їзди, до віртуальної педалі для дверей багажника.</p>
+            </div>
+            <div class="whyOctaviaBlock">
+                <img src="Images/OCTAVIA-spacious.jpg" class="gridImg" alt="Spacious">
+                <p class="headerWhyOctavia">ДОДАТКОВИЙ ПРОСТІР ДЛЯ ВАШОЇ СІМ'Ї ТА БІЗНЕСУ</p>
+                <p class="textWhyOctavia">Абсолютно нова, ще більш простора OCTAVIA ідеально підійде для ваших справ протягом тижня, а на вихідних впорається з усією родиною. Ви можете легко помістити все необхідне в багажне відділення, розраховане на 600 літрів, з достатнім простором для передніх і задніх пасажирів.</p>
+            </div>
+            <div class="whyOctaviaBlock">
+                <img src="Images/OCTAVIA-safety.jpg" class="gridImg" alt="Safety">
+                <p class="headerWhyOctavia">БЕЗПЕКА ВИЩОГО СТУПЕНЯ</p>
+                <p class="textWhyOctavia">Подорожуйте без турбот, будь то перевантажені вулиці міста або вільні дорожні магістралі. OCTAVIA пропонує цілий ряд нових систем допомоги водію. Вони, поряд з дев'ятьма подушками безпеки і максимальним рейтингом 5 зірок Euro NCAP, зводять захист пасажирів на новий рівень.</p>
+            </div>
+            <div class="whyOctaviaBlock">
+                <img src="Images/OCTAVIA-economy.jpg" class="gridImg" alt="Economy">
+                <p class="headerWhyOctavia">ЕКОНОМНА ЕКСПЛУАТАЦІЯ</p>
+                <p class="textWhyOctavia">Отримайте шикарний сімейний автомобіль, який не дорогий в експлуатації і бережливий до природи. Вибирайте бензинові та дизельні двигуни, які також постачаються в електрифікованому виконанні.</p>
             </div>
         </div>
-    </div>
+        <br>
 
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <div class="MainContainer">
 
-    <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1, 'modelSlide', 'dot')"></span>
-        <span class="dot" onclick="currentSlide(2, 'modelSlide', 'dot')"></span>
-    </div>
+            <div class="parallaxImg"></div>
 
-</div>
-<br>
-
-<div class="underModelButtons">
-    <div class="testDriveButton">
-        <a class="AtestDriveButton">Тест-драйв</a>
-    </div>
-    <div class="configuratorButton">
-        <a class="AconfiguratorButton">Конфігуратор</a>
-    </div>
-</div>
-<br>
-
-<p class="aboveGridText">Чому Octavia?</p>
-<div class="gridTable">
-    <div class="whyOctaviaBlock">
-        <img src="Images/OCTAVIA-design.jpg" class="gridImg">
-        <p class="headerWhyOctavia">ВРАЖАЮЧИЙ ДИЗАЙН</p>
-        <p class="textWhyOctavia">OCTAVIA нового покоління стає ще більшою, і завдяки кузову, що нагадує елегантне купе, ще більш захоплюючою і динамічною, ніж будь-коли раніше. Кожна деталь випромінює впевненість непідвладну часу і еталонну якість, куди б ви не вирушали.</p>
-    </div>
-    <div class="whyOctaviaBlock">
-        <img src="Images/OCTAVIA-interior.jpg" class="gridImg">
-        <p class="headerWhyOctavia">СУЧАСНИЙ ІНТЕР'ЄР</p>
-        <p class="textWhyOctavia">Ласкаво просимо в салон нового покоління, який розширює межі свого класу. Основний дисплей, що проектує інформацію на лобове скло, змусить поглянути на світ по-новому. Все найважливіше розташовується на двох 10-дюймових дисплеях. Мінімалістські лінії і атмосферне підсвічування довершують елегантну витонченість салону.</p>
-    </div>
-    <div class="whyOctaviaBlock">
-        <img src="Images/OCTAVIA-comfort.jpg" class="gridImg">
-        <p class="headerWhyOctavia">НЕПЕРЕВЕРШЕНИЙ КОМФОРТ</p>
-        <p class="textWhyOctavia">Будьте впевнені, завдяки таким функціям, як ергономічні сидіння, сертифіковані AGR, і система динамічного контролю ходової частини (DCC), ви завжди будете почувати себе як після відпочинку. Безліч обладнання для вашого комфорту: від Travel Assist, для більш зручної їзди, до віртуальної педалі для дверей багажника.</p>
-    </div>
-    <div class="whyOctaviaBlock">
-        <img src="Images/OCTAVIA-spacious.jpg" class="gridImg">
-        <p class="headerWhyOctavia">ДОДАТКОВИЙ ПРОСТІР ДЛЯ ВАШОЇ СІМ'Ї ТА БІЗНЕСУ</p>
-        <p class="textWhyOctavia">Абсолютно нова, ще більш простора OCTAVIA ідеально підійде для ваших справ протягом тижня, а на вихідних впорається з усією родиною. Ви можете легко помістити все необхідне в багажне відділення, розраховане на 600 літрів, з достатнім простором для передніх і задніх пасажирів.</p>
-    </div>
-    <div class="whyOctaviaBlock">
-        <img src="Images/OCTAVIA-safety.jpg" class="gridImg">
-        <p class="headerWhyOctavia">БЕЗПЕКА ВИЩОГО СТУПЕНЯ</p>
-        <p class="textWhyOctavia">Подорожуйте без турбот, будь то перевантажені вулиці міста або вільні дорожні магістралі. OCTAVIA пропонує цілий ряд нових систем допомоги водію. Вони, поряд з дев'ятьма подушками безпеки і максимальним рейтингом 5 зірок Euro NCAP, зводять захист пасажирів на новий рівень.</p>
-    </div>
-    <div class="whyOctaviaBlock">
-        <img src="Images/OCTAVIA-economy.jpg" class="gridImg">
-        <p class="headerWhyOctavia">ЕКОНОМНА ЕКСПЛУАТАЦІЯ</p>
-        <p class="textWhyOctavia">Отримайте шикарний сімейний автомобіль, який не дорогий в експлуатації і бережливий до природи. Вибирайте бензинові та дизельні двигуни, які також постачаються в електрифікованому виконанні.</p>
-    </div>
-</div>
-<br>
-
-<div class="complectationSw">
-    <div class="complectationSwitch" onclick="currentSlide(1, 'complectationSlide', 'complectationSwitch')"><p>ACTIVE</p></div>
-    <div class="complectationSwitch" onclick="currentSlide(2, 'complectationSlide', 'complectationSwitch')"><p>AMBITION</p></div>
-    <div class="complectationSwitch" onclick="currentSlide(3, 'complectationSlide', 'complectationSwitch')"><p>STYLE</p></div>
-</div>
-<div class="complectationSlide">
-    <img src="Images/OCTAVIA-complectation1.bin" class="complectationImg">
-    <div class="complectationTable">
-        <div class="inGrid">
-            <div class="inGridHeader" id="headerInGrid1">Стандартне обладнання</div>
-            <div class="inGridText" id="textInGrid1">
-                <ul class="inGridUL">
-                    <li>Подушки безпеки водія та пасажира спереду з функцією вимкнення</li>
-                    <li>Центральний замок дверей з дистанційним керуванням та KESSY GO</li>
-                    <li>Система моніторингу тиску в шинах</li>
-                    <li>Система контролю утримання автомобіля на схилі</li>
-                    <li>Пакет Погані дороги</li>
-                    <li>Радіо Swing 8" </li>
-                    <li>4 динаміки</li>
-                    <li>LED передні фари (LED денне світло)</li>
-                    <li>LED задні комбіновані ліхтарі (LOW LED)</li>
-                    <li>Протитуманні фари спереду</li>
-                    <li>Бортовий комп'ютер з дисплеєм MAXI DOT (4,2" 16-кольорів-TFT)</li>
-                    <li>Кондиціонер, бардачок з охолодженням з боку пасажира</li>
-                    <li>Електросклопідйомники спереду та позаду</li>
-                    <li>Зовнішні дзеркала заднього огляду з електрорегулюванням та обігрівом</li>
-                    <li>Внутрішнє дзеркало заднього огляду з затемненням та сенсором</li>
-                    <li>Обігрів заднього скла</li>
-                    <li>AERO-склоочисник скла позаду</li>
-                </ul>
+            <div class="parallaxText">
+                <div class="parallaxTextDiv">
+                    <p class="pParal">
+                        Завдяки ідеальним пропорціям і витонченим поверхням OCTAVIA має стильний і спортивний характер. Вона <strong>довша та ширша</strong> за попереднє покоління і тепер може оснащатися <strong>дисками розміром до 19 дюймів.</strong> Новий дизайн також забезпечує <strong>відмінну аеродинаміку.</strong> З коефіцієнтом від 0,24 лобового опору, абсолютно нова OCTAVIA є одним з найбільш аеродинамічних автомобілів в світі у своєму класі. Чітко виражена передня частина відрізняється широкою решіткою, яка переходить у вузькі, повністю світлодіодні фари. Їх найбільшою перевагою є <strong>функція Matrix</strong>, яка, послідовно включає і приглушує окремі світлодіодні ділянки, <strong>таким чином захищаючи інших учасників дорожнього руху від засліплення.</strong> Це означає, що ви можете постійно користуватися <strong>потужним дальнім світлом</strong> в своїх подорожах, маючи повне уявлення про те, що відбувається навколо вас.
+                    </p>
+                    <p class="pParal">
+                        Однією з абсолютно нових функцій в автомобілях ŠKODA є <strong>головний дисплей</strong>, що показує поточну швидкість, навігаційні інструкції та іншу інформацію на лобовому склі. 10,25-<strong>дюймовий цифровий дисплей</strong> з чотирма різними варіантами відображення пропонує більш детальну інформацію та може бути налаштований для показу обраних вами даних. Інформаційно-розважальний дисплей з діагоналлю до 10-ти <strong>дюймів</strong>, зручно розташований в полі зору водія, постачається з функціями <strong>Apple CarPlay</strong> і <strong>Android Auto</strong> і відображає найсвіжішу інформацію з онлайн-сервісів ŠKODA Connect. Перемикач автоматичної коробки передач DSG, обладнаний технологією перемикання по дротах <strong>(shift-by-wire)</strong>, механічно більше не з'єднаний з коробкою передач. Замість цього команди з перемикання передач передаються електронним способом. Це означає, що ви можете перемикати передачі за допомогою елегантного селектора і активувати нове <strong>електромеханічне ручне гальмо</strong> легким дотиком. <strong>Нове двухспициве кермо</strong> дає вам контроль над усіма основними функціями.
+                    </p>
+                    <p class="pParal">
+                        Якщо ви зазвичай проводите за кермом багато часу, ви чудово знаєте, як важко постійно стежити за знаками, їхати в умовах напруженого дорожнього руху або тягнутися в дорожній пробці. Новий помічник OCTAVIA <strong>Travel Assist</strong> може допомогти. Коли ця функція активована, автомобіль <strong> регулює свою швидкість</strong> відповідно до потокового руху і обмеженням швидкості, <strong>утримує автомобіль в смузі руху</strong>, а також <strong>зупиняється і починає рух в заторі</strong>.
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="inGrid">
-            <div class="inGridHeader">Інтер'єр</div>
-            <div class="inGridText">
-                <ul class="inGridUL">
-                    <li>Зовнішні дзеркала і зовнішні ручки дверей пофарбовані в колір кузова</li>
-                    <li>Обивка сидінь - тканина</li>
-                    <li>Хромовані ручки дверей всередині</li>
-                    <li>Тримач талону</li>
-                    <li>Малий шкіряний пакет (2-спицеве шкіряне кермо)</li>
-                    <li>Сталеві диски Tekton 16"</li>
-                    <li>Запасне колесо зі сталевим диском, домкрат, колісний ключ</li>
-                    <li>Регулювання сидіння водія по висоті</li>
-                    <li>Заднє сидіння ціле, спинка розділена та складається</li>
-                    <li>Сонцезахисні козирки з дзеркалом</li>
-                    <li>Бічні та заднє вікна з термозахисного скла (тоновані вікна)</li>
-                    <li>Відділення для окулярів</li>
-                    <li>Кришка бардачка з амортизацією (уповільнене відкриття) та з світлом</li>
-                    <li>Килимок багажного відділення Comfort</li>
-                    <li>Шкребок для льоду</li>
-                    <li>Розетки 12V</li>
-                </ul>
+
+
+        <div class="complectationSw" id="complButtons">
+            <div class="complectationSwitch" onclick="currentSlide(1, 'complectationSlide', 'complectationSwitch')"><p>ACTIVE</p></div>
+            <div class="complectationSwitch" onclick="currentSlide(2, 'complectationSlide', 'complectationSwitch')"><p>AMBITION</p></div>
+            <div class="complectationSwitch" onclick="currentSlide(3, 'complectationSlide', 'complectationSwitch')"><p>STYLE</p></div>
+        </div>
+        <div class="complectationSlide">
+            <img src="Images/OCTAVIA-complectation1.bin" class="complectationImg" alt="Active">
+            <div class="complectationTable">
+                <div class="inGrid">
+                    <div class="inGridHeader" id="headerInGrid1">Стандартне обладнання</div>
+                    <div class="inGridText" id="textInGrid1">
+                        <ul class="inGridUL">
+                            <li>Подушки безпеки водія та пасажира спереду з функцією вимкнення</li>
+                            <li>Центральний замок дверей з дистанційним керуванням та KESSY GO</li>
+                            <li>Система моніторингу тиску в шинах</li>
+                            <li>Система контролю утримання автомобіля на схилі</li>
+                            <li>Пакет Погані дороги</li>
+                            <li>Радіо Swing 8" </li>
+                            <li>4 динаміки</li>
+                            <li>LED передні фари (LED денне світло)</li>
+                            <li>LED задні комбіновані ліхтарі (LOW LED)</li>
+                            <li>Протитуманні фари спереду</li>
+                            <li>Бортовий комп'ютер з дисплеєм MAXI DOT (4,2" 16-кольорів-TFT)</li>
+                            <li>Кондиціонер, бардачок з охолодженням з боку пасажира</li>
+                            <li>Електросклопідйомники спереду та позаду</li>
+                            <li>Зовнішні дзеркала заднього огляду з електрорегулюванням та обігрівом</li>
+                            <li>Внутрішнє дзеркало заднього огляду з затемненням та сенсором</li>
+                            <li>Обігрів заднього скла</li>
+                            <li>AERO-склоочисник скла позаду</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="inGrid">
+                    <div class="inGridHeader">Інтер'єр</div>
+                    <div class="inGridText">
+                        <ul class="inGridUL">
+                            <li>Зовнішні дзеркала і зовнішні ручки дверей пофарбовані в колір кузова</li>
+                            <li>Обивка сидінь - тканина</li>
+                            <li>Хромовані ручки дверей всередині</li>
+                            <li>Тримач талону</li>
+                            <li>Малий шкіряний пакет (2-спицеве шкіряне кермо)</li>
+                            <li>Сталеві диски Tekton 16"</li>
+                            <li>Запасне колесо зі сталевим диском, домкрат, колісний ключ</li>
+                            <li>Регулювання сидіння водія по висоті</li>
+                            <li>Заднє сидіння ціле, спинка розділена та складається</li>
+                            <li>Сонцезахисні козирки з дзеркалом</li>
+                            <li>Бічні та заднє вікна з термозахисного скла (тоновані вікна)</li>
+                            <li>Відділення для окулярів</li>
+                            <li>Кришка бардачка з амортизацією (уповільнене відкриття) та з світлом</li>
+                            <li>Килимок багажного відділення Comfort</li>
+                            <li>Шкребок для льоду</li>
+                            <li>Розетки 12V</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-<div class="complectationSlide">
-    <img src="Images/OCTAVIA-complectation2.bin" class="complectationImg">
-    <div class="complectationTable">
-        <div class="inGrid">
-            <div class="inGridHeader" id="headerInGrid2">Стандартне обладнання</div>
-            <div class="inGridText" id="textInGrid2">
-                <ul class="inGridUL">
-                    <li>Додатково до Active:</li>
-                    <li>Бокові подушки безпеки спереду</li>
-                    <li>Третій задній підголівник</li>
-                    <li>8 динаміків </li>
-                    <li>Технологія SmartLink+</li>
-                    <li>Підготовка до мобільного телефону, Bluetooth</li>
-                    <li>2x USB спереду, 2x USB позаду,1x USB в дзеркалі заднього виду</li>
-                    <li>CLIMATRONIC двозонна система кондиціювання, з сенсором вологи, комбіфільтром та AQS, бардачок з охолодженням з боку пасажира</li>
-                    <li>Підігрів форсунок омивача вітрового скла</li>
-                    <li>Передні сидіння з підігрівом</li>
-                    <li>Бортовий комп'ютер з активним інформаційним дисплеєм Medium (10"), виробництво до 34 к.т.2020</li>
-                    <li>Обмежувач швидкості</li>
-                </ul>
+        <div class="complectationSlide">
+            <img src="Images/OCTAVIA-complectation2.bin" class="complectationImg" alt="Ambition">
+            <div class="complectationTable">
+                <div class="inGrid">
+                    <div class="inGridHeader" id="headerInGrid2">Стандартне обладнання</div>
+                    <div class="inGridText" id="textInGrid2">
+                        <ul class="inGridUL">
+                            <li>Додатково до Active:</li>
+                            <li>Бокові подушки безпеки спереду</li>
+                            <li>Третій задній підголівник</li>
+                            <li>8 динаміків </li>
+                            <li>Технологія SmartLink+</li>
+                            <li>Підготовка до мобільного телефону, Bluetooth</li>
+                            <li>2x USB спереду, 2x USB позаду,1x USB в дзеркалі заднього виду</li>
+                            <li>CLIMATRONIC двозонна система кондиціювання, з сенсором вологи, комбіфільтром та AQS, бардачок з охолодженням з боку пасажира</li>
+                            <li>Підігрів форсунок омивача вітрового скла</li>
+                            <li>Передні сидіння з підігрівом</li>
+                            <li>Бортовий комп'ютер з активним інформаційним дисплеєм Medium (10"), виробництво до 34 к.т.2020</li>
+                            <li>Обмежувач швидкості</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="inGrid">
+                    <div class="inGridHeader">Інтер'єр</div>
+                    <div class="inGridText">
+                        <ul class="inGridUL">
+                            <li>Додатково до Active:</li>
+                            <li>Дверні та бічні панелі (щітка)</li>
+                            <li>Малий шкіряний пакет (2-спицеве мультифункціональне шкіряне кермо для радіо і телефону)/з пелюстками перемикання передач для DSG</li>
+                            <li>Легкосплавні диски TWISTER 7J x 16"</li>
+                            <li>Запасне (не повнорозмірне) колесо для тимчасового використання зі сталевим диском, домкрат, колісний ключ</li>
+                            <li>Підлокітник спереду з відділенням для зберігання "JUMBO BOX"</li>
+                            <li>Відділення/перегородки для зберігання з Cargo-елементами в багажному відділенні</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="inGrid">
-            <div class="inGridHeader">Інтер'єр</div>
-            <div class="inGridText">
-                <ul class="inGridUL">
-                    <li>Додатково до Active:</li>
-                    <li>Дверні та бічні панелі (щітка)</li>
-                    <li>Малий шкіряний пакет (2-спицеве мультифункціональне шкіряне кермо для радіо і телефону)/з пелюстками перемикання передач для DSG</li>
-                    <li>Легкосплавні диски TWISTER 7J x 16"</li>
-                    <li>Запасне (не повнорозмірне) колесо для тимчасового використання зі сталевим диском, домкрат, колісний ключ</li>
-                    <li>Підлокітник спереду з відділенням для зберігання "JUMBO BOX"</li>
-                    <li>Відділення/перегородки для зберігання з Cargo-елементами в багажному відділенні</li>
-                </ul>
+        <div class="complectationSlide">
+            <img src="Images/OCTAVIA-complectation3.bin" class="complectationImg" alt="Style">
+            <div class="complectationTable">
+                <div class="inGrid">
+                    <div class="inGridHeader" id="headerInGrid3">Стандартне обладнання</div>
+                    <div class="inGridText" id="textInGrid3">
+                        <ul class="inGridUL">
+                            <li>Додатково до Ambition:</li>
+                            <li>Центральний замок дверей з доступом без ключа, старт/стоп функцією двигуна, "KESSY FULL" без SAFE системи</li>
+                            <li>Дитячий замок (задні двері) - електричне керування</li>
+                            <li>Навігаційна система Columbus 10" </li>
+                            <li>Технологія SmartLink+, дротове та бездротове з'єднання (Wired &amp; Wireless App-Connect)</li>
+                            <li>Голосове керування</li>
+                            <li>Інформаційно-сервісна підтримка (Care Connect 1 рік + Infotainment Online 1 рік)</li>
+                            <li>LED SBBR задній ліхтар</li>
+                            <li>"LIGHT AND RAIN ASSIST" , внутрішнє дзеркало заднього виду з функцією автоматичного затемнення, з сенсорами світла/дощу, з рамкою</li>
+                            <li>Бортовий комп'ютер з активним інформаційним дисплеєм Medium (10")</li>
+                            <li>Зовнішні дзеркала заднього огляду з електрорегулюванням та обігрівом, функцією складання</li>
+                            <li>Задній парктронік "PARK DISTANCE CONTROL"</li>
+                            <li>Камера заднього виду та LED SBBR High + Welcome ефект</li>
+                            <li>Круїз-контроль з обмежувачем швидкості "CRUISE CONTROL"</li>
+                            <li>Асистент руху в смузі "LANE ASSIST BASIC", мультифункціональна камера</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="inGrid">
+                    <div class="inGridHeader">Інтер'єр</div>
+                    <div class="inGridText">
+                        <ul class="inGridUL">
+                            <li>Додатково до Ambition:</li>
+                            <li>Тканинні килимки</li>
+                            <li>Шкіряне мультифункціональне 2-спицеве кермо для радіо і телефону з підігрівом / з пелюстками перемикання передач для DSG</li>
+                            <li>Легкосплавні диски ROTARE 7J x 17"</li>
+                            <li>Регулювання передніх сидінь за висотою та з підтримкою поперекової зони</li>
+                            <li>Сонцезахисні козирки з дзеркалом та підсвічуванням</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-<div class="complectationSlide">
-    <img src="Images/OCTAVIA-complectation3.bin" class="complectationImg">
-    <div class="complectationTable">
-        <div class="inGrid">
-            <div class="inGridHeader" id="headerInGrid3">Стандартне обладнання</div>
-            <div class="inGridText" id="textInGrid3">
-                <ul class="inGridUL">
-                    <li>Додатково до Ambition:</li>
-                    <li>Центральний замок дверей з доступом без ключа, старт/стоп функцією двигуна, "KESSY FULL" без SAFE системи</li>
-                    <li>Дитячий замок (задні двері) - електричне керування</li>
-                    <li>Навігаційна система Columbus 10" </li>
-                    <li>Технологія SmartLink+, дротове та бездротове з'єднання (Wired &amp; Wireless App-Connect)</li>
-                    <li>Голосове керування</li>
-                    <li>Інформаційно-сервісна підтримка (Care Connect 1 рік + Infotainment Online 1 рік)</li>
-                    <li>LED SBBR задній ліхтар</li>
-                    <li>"LIGHT AND RAIN ASSIST" , внутрішнє дзеркало заднього виду з функцією автоматичного затемнення, з сенсорами світла/дощу, з рамкою</li>
-                    <li>Бортовий комп'ютер з активним інформаційним дисплеєм Medium (10")</li>
-                    <li>Зовнішні дзеркала заднього огляду з електрорегулюванням та обігрівом, функцією складання</li>
-                    <li>Задній парктронік "PARK DISTANCE CONTROL"</li>
-                    <li>Камера заднього виду та LED SBBR High + Welcome ефект</li>
-                    <li>Круїз-контроль з обмежувачем швидкості "CRUISE CONTROL"</li>
-                    <li>Асистент руху в смузі "LANE ASSIST BASIC", мультифункціональна камера</li>
-                </ul>
+        <br>
+
+        <div class="downloads">
+            <div class="downloadsEl">
+                <a class="downloadsElClick" href="https://az749841.vo.msecnd.net/sitesukua/alv1/fee35148-5631-447e-b9ae-1e2ddca7f90e/octavia_new.072eb24f560bdda7c2c72b1a91d8c39d.pdf">
+                    <img src="https://az749841.vo.msecnd.net/modulesassets/sfv4/Assets.img.icons.mod-download-file@2.96b71ca4af46dba92fc71f7461d98e21.png" class="downloadsElImg" alt="download">
+                    <p class="downloadsText">ЗАВАНТАЖИТИ ПРАЙС-ЛИСТ</p>
+                </a>
+            </div>
+            <div class="downloadsEl">
+                <a class="downloadsElClick" href="https://az749841.vo.msecnd.net/sitesukua/alv1/9830a832-f66d-4bd5-952b-a50d472c607c/Accessories_SCALA_%20%D0%A3%D0%9A%D0%A0%20int.54717ed81184dd79dcbbc82bb28ba7d6.pdf">
+                    <img src="https://az749841.vo.msecnd.net/modulesassets/sfv4/Assets.img.icons.mod-download-file@2.96b71ca4af46dba92fc71f7461d98e21.png" class="downloadsElImg" alt="download">
+                    <p class="downloadsText">ЗАВАНТАЖИТИ АКСЕСУАРИ</p>
+                </a>
+            </div>
+            <div class="downloadsEl">
+                <a class="downloadsElClick" href="https://az749841.vo.msecnd.net/sitesukua/alv1/257bf466-c6b3-43fb-9de3-88a54b70d2e0/skoda_octavia_catalog_accessories_2020_260x210.8c6fa76ae3e1a841e317e3ddaff8d08a.pdf">
+                    <img src="https://az749841.vo.msecnd.net/modulesassets/sfv4/Assets.img.icons.mod-download-file@2.96b71ca4af46dba92fc71f7461d98e21.png" class="downloadsElImg" alt="download">
+                    <p class="downloadsText">ЗАВАНТАЖИТИ КАТАЛОГ</p>
+                </a>
             </div>
         </div>
-        <div class="inGrid">
-            <div class="inGridHeader">Інтер'єр</div>
-            <div class="inGridText">
-                <ul class="inGridUL">
-                    <li>Додатково до Ambition:</li>
-                    <li>Тканинні килимки</li>
-                    <li>Шкіряне мультифункціональне 2-спицеве кермо для радіо і телефону з підігрівом / з пелюстками перемикання передач для DSG</li>
-                    <li>Легкосплавні диски ROTARE 7J x 17"</li>
-                    <li>Регулювання передніх сидінь за висотою та з підтримкою поперекової зони</li>
-                    <li>Сонцезахисні козирки з дзеркалом та підсвічуванням</li>
-                </ul>
+
+        <div class="safety">
+            <div class="safetyHeader">БЕЗПЕКА БЕЗ КОМПРОМІСІВ</div>
+            <img src="euroNcap.png" class="safetyImg">
+            <div class="safetyText">Škoda Octavia отримала найвищий рейтинг п'ять зірок за безпеку в краш-тестах EuroNCAP</div>
+        </div>
+
+        <div class="stickyButtons">
+            <div class="stickyButtonsBlock">
+                <div class="stickyButtonsCover">
+                    <div class="stickyButtonsEl" id="stickyButtonsEl1"><img src="Images/carPic.png" class="stickyButtonsImg" id="stickyButtonsImg1"><span class="stickyButtonsSpan">Склад авто</span></div>
+                    <div class="stickyButtonsEl" id="stickyButtonsEl2"><img src="Images/destPic.png" class="stickyButtonsImg" id="stickyButtonsImg2"><span class="stickyButtonsSpan">Офіційні дилери ŠKODA</span></div>
+                    <div class="stickyButtonsEl" id="stickyButtonsEl3"><img src="Images/toolPic.png" class="stickyButtonsImg" id="stickyButtonsImg3"><span class="stickyButtonsSpan">Сервісні партнери ŠKODA</span></div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
 
-<div class="stickyButtons">
-    <div class="stickyButtonsBlock">
-        <div class="stickyButtonsCover">
-            <div class="stickyButtonsEl" id="stickyButtonsEl1"><img src="Images/carPic.png" class="stickyButtonsImg" id="stickyButtonsImg1"><span class="stickyButtonsSpan">Склад авто</span></div>
-            <div class="stickyButtonsEl" id="stickyButtonsEl2"><img src="Images/destPic.png" class="stickyButtonsImg" id="stickyButtonsImg2"><span class="stickyButtonsSpan">Офіційні дилери ŠKODA</span></div>
-            <div class="stickyButtonsEl" id="stickyButtonsEl3"><img src="Images/toolPic.png" class="stickyButtonsImg" id="stickyButtonsImg3"><span class="stickyButtonsSpan">Сервісні партнери ŠKODA</span></div>
-        </div>
-    </div>
-</div>
+        <footer>
+            <div class="footerGrid">
+                <div class="footerGridElem">
+                    <a class="footerHeader"><span>Клієнтам ŠKODA</span></a>
+                    <a class="footerA" href="https://www.skoda-auto.ua/owners/skoda-credit"><span>Кредит</span></a>
+                    <a class="footerA" href="https://www.skoda-auto.ua/owners/price-lists"><span>Прайс-листи</span></a>
+                    <a class="footerA" href="https://www.skoda-auto.ua/company/skoda-connect2"><span>ŠKODA Connect</span></a>
+                    <a class="footerA" href="https://www.skoda-auto.ua/other/assistants"><span>Асистенти</span></a>
+                    <a class="footerA" href="https://www.skoda-auto.ua/company/why-skoda-overview"><span>Чому ŠKODA</span></a>
+                </div>
+            </div>
 
-<!--<div id="div1"></div>-->
+            <div class="footerGrid">
+                <div class="footerGridElem">
+                    <a class="footerHeader"><span>ŠKODA Service</span></a>
+                    <a class="footerA" href="https://www.skoda-auto.ua/owners/accessories"><span>Aксесуари</span></a>
+                    <a class="footerA" href="https://www.skoda-auto.ua/skoda-service/garanty"><span>Гарантія</span></a>
+                    <a class="footerA" href="https://www.skoda-auto.ua/skoda-service/skoda-genuine-parts"><span>Запчастини ŠKODA</span></a>
+                    <a class="footerA" href="https://www.skoda-auto.ua/skoda-service/skoda-24"><span>ŠKODA24</span></a>
+                    <a class="footerA" href="https://www.skoda-auto.ua/other/feedback#anchor-M19-8419f098"><span>Зворотній зв'язок</span></a>
+                    <a class="footerA" href="https://clg.skoda-auto.com/api/Link?tool=Ownersmanuals&culture=uk-UA&target=modelderivative&bid=886&instancename=UKR&salesprogram=UKR&mbv=NX3&modelcode=NX&bodycode=63001&carline=63001&_ga=2.93916125.1987199204.1604777319-1bd6ad06-5ce6-4642-8120-dfd4953f03a6"><span>Посібники</span></a>
+                </div>
+            </div>
 
-<!--<video controls preload="metadata">
-    <source src="logo.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-</video>-->
-<!--<div class="navMenu">
-    <input type="checkbox" id="nav-toggle" hidden>
-    <nav class="topMenu">
-        <label for="nav-toggle" class="nav-toggle" onclick>
-&lt;!&ndash;            <img src="MenuIcon96.png" class="menuPng">&ndash;&gt;
-        </label>
+            <div class="footerGrid">
+                <div class="footerGridElem">
+                    <a class="footerHeader"><span>Про компанію</span></a>
+                    <a class="footerA" href="https://www.skoda-auto.ua/company/contact-page"><span>Контакти</span></a>
+                    <a class="footerA" href="https://www.skoda-auto.ua/company/skoda-solomonovo"><span>ŠKODA в Соломоново</span></a>
+                    <a class="footerA" href="https://www.skoda-auto.ua/company/socialnie-proekty"><span>Соціальні проекти</span></a>
+                    <a class="footerA" href="https://www.skoda-auto.ua/company/history"><span>Історія ŠKODA</span></a>
+                </div>
+            </div>
 
-        <ul class="UL">
-            <li class="LI">Модельний ряд</li>
-        </ul>
+            <div class="footerGrid">
+                <div class="footerGridElem">
+                    <a class="footerHeader"><span>Прес-центр</span></a>
+                    <a class="footerA" href="https://www.skoda-auto.ua/news#anchor-M05-0095ea9c"><span>Новини</span></a>
+                    <a class="footerA" href="https://www.skoda-auto.ua/owners/skoda-style"><span>Журнал ŠKODA Style</span></a>
+                    <a class="footerA" href="https://www.skoda-auto.ua/press-center/frauds"><span>Обережно шахраї</span></a>
+                    <a class="footerA" href="https://www.skoda-auto.ua/sitemap"><span>Карта сайту</span></a>
+                </div>
+            </div>
+        </footer>
+    </article>
 
-&lt;!&ndash;        <img src="MenuIcon96.png" class="menuPng">&ndash;&gt;
-    </nav>
-</div>-->
+</main>
 
 <script src="skoda.js"></script>
 </body>

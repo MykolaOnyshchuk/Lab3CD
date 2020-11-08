@@ -1,5 +1,5 @@
 let slideIndex = 1;
-showSlides(slideIndex, "modelSlide", "dot");
+showSlides(slideIndex, "modelSlide", "dotSwitch");
 showSlides(slideIndex,"complectationSlide", "complectationSwitch");
 
 window.onload = function () {
@@ -9,7 +9,7 @@ window.onload = function () {
 }
 
 function plusSlides(n) {
-    showSlides(slideIndex += n, "modelSlide", "dot");
+    showSlides(slideIndex += n, "modelSlide", "dotSwitch");
 }
 
 function currentSlide(n, slide, switcher) {

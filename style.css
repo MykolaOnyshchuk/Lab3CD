@@ -3,6 +3,15 @@
     padding: 0px;
 }
 
+body {
+    position: relative;
+}
+
+.art1 {
+    position: absolute;
+    top: 0;
+}
+
 .preloader {
     position: fixed;
     left: 0;
@@ -10,7 +19,7 @@
     right: 0;
     bottom: 0;
     background-color: white;
-    z-index: 10;
+    z-index: 14;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,10 +64,10 @@ body {
     font: normal small-caps 6.7em "Franklin Gothic Medium", serif;
 }
 
-#menu__toggle {
+#checkboxMenu {
     opacity: 0;
 }
-.menu__btn {
+.buttonMenu {
     display: flex;
     align-items: center;
     position: fixed;
@@ -69,31 +78,30 @@ body {
     cursor: pointer;
     z-index: 1;
 }
-.menu__btn > span,
-.menu__btn > span::before,
-.menu__btn > span::after {
+.buttonMenu > span,
+.buttonMenu > span::before,
+.buttonMenu > span::after {
     display: block;
     position: absolute;
     width: 100%;
     height: 2px;
     background-color: #616161;
 }
-.menu__btn > span::before {
+.buttonMenu > span::before {
     content: '';
     top: -8px;
 }
-.menu__btn > span::after {
+.buttonMenu > span::after {
     content: '';
     top: 8px;
 }
 
-.menu__box {
+.containerMenu {
     display: block;
     position: fixed;
     visibility: hidden;
     top: 0;
     left: -100%;
-    width: 300px;
     height: 100%;
     margin: 0;
     padding: 80px 0;
@@ -102,7 +110,7 @@ body {
     background-color: white;
     box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
 }
-.menu__item {
+.menuLi {
     display: block;
     padding: 12px 24px;
     color: #333;
@@ -110,43 +118,142 @@ body {
     font-size: 20px;
     font-weight: 600;
     text-decoration: none;
-    /*padding-top: 5px;
-    padding-bottom: 5px;
-    background-color: white;*/
 }
-.menu__item:hover {
+.menuLi:hover {
     animation-name: shrink;
     animation-duration: 1s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
 }
 
-#menu__toggle:checked ~ .menu__btn > span {
+#checkboxMenu:checked ~ .hamburger-menu > .buttonMenu > span {
     transform: rotate(45deg);
 }
-#menu__toggle:checked ~ .menu__btn > span::before {
+#checkboxMenu:checked ~ .hamburger-menu > .buttonMenu > span::before {
     top: 0;
     transform: rotate(0);
 }
-#menu__toggle:checked ~ .menu__btn > span::after {
+#checkboxMenu:checked ~ .hamburger-menu > .buttonMenu > span::after {
     top: 0;
     transform: rotate(90deg);
 }
-#menu__toggle:checked ~ .menu__box {
+#checkboxMenu:checked ~ .hamburger-menu > .containerMenu {
     visibility: visible;
     left: 0;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
 }
 
-.menu__btn > span,
-.menu__btn > span::before,
-.menu__btn > span::after {
-    transition-duration: .25s;
+#checkboxMenu:checked ~ main {
+    animation: pageShrink ease-in-out forwards 0.5s;
 }
-.menu__box {
-    transition-duration: .25s;
+
+main {
+    animation: pageUnShrink ease-in-out forwards 0.5s;
 }
-.menu__item {
-    transition-duration: .25s;
+
+#checkboxMenu:checked ~ main > .art1 {
+    animation:pageShiftX ease-in-out forwards 0.5s;
+}
+
+.art1 {
+    animation: pageUnShiftX ease-in-out forwards 0.5s;
+}
+
+#checkboxMenu:checked ~ main > .art1 > #header > #headerLogo {
+    animation: rotate 0.75s;
+}
+
+#headerLogo {
+    animation: rotateAfter 0.75s;
+}
+
+#checkboxMenu:checked ~ main > .art1 > #header > #skoda_name {
+    margin-right: 20%;
+    transition-duration: 0.5s;
+}
+
+#checkboxMenu:checked ~ main > .art1 > .imgBlock > .on_image_model {
+    font-size: 5.4vw;
+    transition-duration: 0.5s;
+}
+
+.on_image_model {
+    font-size: 6.75vw;
+    transition-duration: 0.5s;
+}
+
+#skoda_name {
+    margin-right: 0;
+    transition-duration: 0.5s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateAfter {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes pageShrink {
+    0% {
+        width: 100%;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+@keyframes pageUnShrink {
+    0% {
+        width: 80%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes pageShiftX {
+    0% {
+        left: 0%;
+    }
+    100% {
+        left: 20%;
+    }
+}
+
+@keyframes pageUnShiftX {
+    0% {
+        left: 20%;
+    }
+    100% {
+        left: 0%;
+    }
+}
+
+.buttonMenu > span,
+.buttonMenu > span::before,
+.buttonMenu > span::after {
+    transition-duration: .5s;
+}
+.containerMenu {
+    transition-duration: .5s;
+}
+.menuLi {
+    transition-duration: .5s;
 }
 
 @keyframes shrink {
@@ -155,19 +262,34 @@ body {
     }
     100% {
         background-color: green;
-        transform-origin: left;
     }
 }
 
 #header {
+    position: fixed;
+    top: 0;
     width: 100%;
     display: flex;
     padding-bottom: 10px;
     padding-top: 10px;
-    position: fixed;
     background-color: white;
-    z-index: 2;
+    z-index: 4;
     box-shadow: 0 0 10px black;
+}
+
+#headerMenu {
+    z-index: 8;
+}
+.buttonMenu {
+    z-index: 10;
+}
+
+.containerMenu {
+    z-index: 7;
+}
+
+.menuLi {
+    z-index: 7;
 }
 
 .hamburger-menu {
@@ -196,7 +318,7 @@ body {
 }
 
 #oct1 {
-    margin-top: 70px;
+    margin-top: 53px;
     width: 100%;
 }
 
@@ -215,7 +337,6 @@ body {
     position: relative;
     display: inline-block;
     z-index: 1;
-
 }
 
 .imgBlock p {
@@ -244,7 +365,6 @@ body {
     position: absolute;
     animation-name: snake;
     animation-duration: 3s;
-    /*animation-timing-function: cubic-bezier(.14, 1.12, .67, .99);*/
     animation-timing-function: ease-in-out;
     animation-delay: 0s;
     animation-iteration-count: infinite;
@@ -254,15 +374,12 @@ body {
 
 @keyframes snake {
     0% {
-        /*translate(-200%);*/
         background-color: white;
     }
     50% {
-        /*translate(-100%);*/
         background-color: green;
     }
     100% {
-        /*translate(100%);*/
         background-color: white;
     }
 }
@@ -285,13 +402,51 @@ body {
     font: normal small-caps 1.1em "Franklin Gothic Book", serif;
 }
 
+@media(min-width: 1200px) {
+
+    .downloads {
+        flex-direction: row;
+    }
+
+    .parallaxImg {
+        height: 130vh;
+        max-height: 60vw;
+    }
+}
+
 @media(min-width: 774px) {
+
+
+    .containerMenu {
+        width: 20%;
+    }
+
     .octModel {
         height: 300px;
         width: 600px;
         margin: 0 auto;
         display: block;
         top: 0;
+    }
+
+    .testDriveButton {
+        width: 200px;
+        height: 50px;
+        font: normal 800 small-caps 1.8em Bahnschrift, serif;
+    }
+
+    .configuratorButton {
+        width: 200px;
+        height: 50px;
+        font: normal 800 small-caps 1.8em Bahnschrift, serif;
+    }
+
+    .testDriveButton:hover {
+        font: normal 800 small-caps 1.8em Bahnschrift, serif;
+    }
+
+    .configuratorButton:hover {
+        font: normal 800 small-caps 1.8em Bahnschrift, serif;
     }
 
     .gridTable {
@@ -304,9 +459,65 @@ body {
         width: 774px;
         grid-template-columns: 1fr 1fr;
     }
+
+    #skoda_name {
+        padding-left: 15%;
+        padding-right: 10%;
+    }
+
+    #headerLogo {
+        margin-left: 7%;
+    }
+
+    .inGridHeader {
+        font-size: 1.3em;
+    }
+
+    .inGridText {
+        font-size: 1em;
+    }
+
+    .headerTextModelBlock {
+        font: normal small-caps 4em "Franklin Gothic Medium", serif;
+    }
+
+    .aboveGridText {
+        font: normal small-caps 4em "Franklin Gothic Medium", serif;
+    }
+
+    footer {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media(max-width: 1199px) {
+    .downloads {
+        flex-direction: column;
+    }
+
+    .bySideText {
+        display: none;
+    }
+
+    .parallaxImg {
+        height: 100vh;
+        max-height: 70vw;
+    }
+}
+
+@media(max-width: 1000px) {
+    .parallaxImg {
+        height: 80vh;
+        max-height: 70vw;
+    }
 }
 
 @media(max-width: 773px) {
+
+    .containerMenu {
+        width: 100%;
+    }
+
     .octModel {
         height: auto;
         width: 80%;
@@ -315,21 +526,33 @@ body {
         top: 0;
     }
 
-    /*#header {
-
+    .testDriveButton {
+        width: 170px;
+        height: 40px;
+        font: normal 800 small-caps 1.4em Bahnschrift, serif;
     }
 
-    #headerLogo {
-        max-width: 30px;
-        height: auto;
+    .configuratorButton {
+        width: 170px;
+        height: 40px;
+        font: normal 800 small-caps 1.4em Bahnschrift, serif;
+    }
+
+    .testDriveButton:hover {
+        font: normal 800 small-caps 1.4em Bahnschrift, serif;
+    }
+
+    .configuratorButton:hover {
+        font: normal 800 small-caps 1.4em Bahnschrift, serif;
     }
 
     #skoda_name {
-        font-size: 20px;
-    }*/
+        padding-left: 8%;
+        padding-right: 5%;
+    }
 
-    .bySideText {
-        display: none;
+    #headerLogo {
+        margin-left: 10%;
     }
 
     .gridTable {
@@ -346,14 +569,67 @@ body {
         width: 100%;
         grid-template-columns: 1fr 1fr;
     }
+
+    .inGridHeader {
+        font-size: 1.1em;
+    }
+
+    .inGridText {
+        font-size: 0.8em;
+    }
+
+    .headerTextModelBlock {
+        font: normal small-caps 3.2em "Franklin Gothic Medium", serif;
+    }
+
+    .aboveGridText {
+        font: normal small-caps 3.2em "Franklin Gothic Medium", serif;
+    }
+
+    footer {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .parallaxImg {
+        height: 80vh;
+        max-height: 93vw;
+    }
 }
 
 @media(max-width: 450px) {
+
+    .testDriveButton {
+        width: 130px;
+        height: 30px;
+        font: normal 800 small-caps 1em Bahnschrift, serif;
+    }
+
+    .configuratorButton {
+        width: 130px;
+        height: 30px;
+        font: normal 800 small-caps 1em Bahnschrift, serif;
+    }
+
+    .testDriveButton:hover {
+        font: normal 800 small-caps 1em Bahnschrift, serif;
+    }
+
+    .configuratorButton:hover {
+        font: normal 800 small-caps 1em Bahnschrift, serif;
+    }
     .gridTable {
         grid-template-columns: 1fr;
     }
     .snaky_animation_line {
         height: 2px;
+    }
+
+    .headerTextModelBlock {
+        font: normal small-caps 2.5em "Franklin Gothic Medium", serif;
+    }
+
+    .aboveGridText {
+        font: normal small-caps 2.5em "Franklin Gothic Medium", serif;
     }
 
     .complectationImg {
@@ -362,6 +638,24 @@ body {
     .complectationTable {
         width: 100%;
         grid-template-columns: 1fr;
+    }
+
+    #skoda_name {
+        padding-left: 4%;
+        padding-right: 2.5%;
+    }
+
+    #headerLogo {
+        margin-left: 12%;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+    }
+
+    .parallaxImg {
+        height: 80vh;
+        max-height: 125vw;
     }
 }
 
@@ -380,7 +674,6 @@ body {
 }
 
 .headerTextModelBlock {
-    font: normal small-caps 4em "Franklin Gothic Medium", serif;
     display: block;
 }
 
@@ -389,8 +682,7 @@ body {
     display: block;
 }
 
-/* Next & previous buttons */
-.prev, .next {
+.leftArrow, .rightArrow {
     display: block;
     cursor: pointer;
     position: absolute;
@@ -404,18 +696,20 @@ body {
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
+    z-index: 6;
 }
 
-.next {
+.rightArrow {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
 
-.prev:hover, .next:hover {
+.modelSlide:hover ~ .leftArrow, .modelSlide:hover ~ .rightArrow, .leftArrow:hover, .rightArrow:hover {
+
     background-color: rgba(0,0,0,0.8);
 }
 
-.dot {
+.dotSwitch {
     cursor: pointer;
     height: 8px;
     width: 8px;
@@ -426,7 +720,7 @@ body {
     transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active, .dotSwitch:hover {
     background-color: #717171;
 }
 
@@ -438,12 +732,12 @@ body {
 }
 
 @-webkit-keyframes fade {
-    from {opacity: .4}
+    from {opacity: 0.4}
     to {opacity: 1}
 }
 
 @keyframes fade {
-    from {opacity: .4}
+    from {opacity: 0.4}
     to {opacity: 1}
 }
 
@@ -455,22 +749,19 @@ body {
     position: relative;
     justify-content: center;
     color: white;
-    font: normal 800 small-caps 1.8em Bahnschrift, serif;
 }
 
 .testDriveButton {
     position: static;
     display: flex;
     align-items: center;
-    width: 200px;
-    height: 50px;
     background-color: forestgreen;
     margin-right: 10px;
     border-style: solid;
     border-width: 2px;
     box-sizing: border-box;
-    font: inherit;
     justify-content: center;
+    cursor: pointer;
 
 }
 .AtestDriveButton {
@@ -478,13 +769,14 @@ body {
     margin: 0;
     vertical-align: middle;
     justify-content: center;
+    text-decoration: none;
+    color: inherit;
 }
 
 .testDriveButton:hover {
     color: forestgreen;
     background-color: white;
     border-color: forestgreen;
-    font: inherit;
     display: flex;
 }
 
@@ -492,29 +784,28 @@ body {
     position: static;
     display: flex;
     align-items: center;
-    width: 200px;
-    height: 50px;
     background-color: black;
     margin-left: 10px;
     border-style: solid;
     border-width: 2px;
     box-sizing: border-box;
-    font: inherit;
     justify-content: center;
+    cursor: pointer;
 }
 
 .AconfiguratorButton {
     text-align: center;
     margin: 0;
     display: flex;
+    color: inherit;
     justify-content: center;
+    text-decoration: none;
 }
 
 .configuratorButton:hover {
     color: black;
     background-color: white;
     border-color: black;
-    font: inherit;
 
 }
 
@@ -550,7 +841,6 @@ body {
 .aboveGridText {
     width: 100%;
     text-align: center;
-    font: normal small-caps 4em "Franklin Gothic Medium", serif;
     background-color: forestgreen;
     color: white;
 }
@@ -567,6 +857,7 @@ body {
     margin-right: 2%;
     margin-top: 1%;
     margin-bottom: 3%;
+    line-height: 1.3em;
 }
 
 .complectation {
@@ -601,17 +892,13 @@ body {
 .complectationSwitch.active {
     background-color: white;
     color: forestgreen;
-    border-color: forestgreen;
-    border-width: 2px;
-    border-style: solid;
+    border: solid 2px forestgreen;
 }
 
 .complectationSwitch:hover {
     background-color: darkgrey;
     color: forestgreen;
-    border-color: forestgreen;
-    border-width: 2px;
-    border-style: solid;
+    border: solid 2px forestgreen;
 }
 
 .complectationImg {
@@ -623,8 +910,7 @@ body {
 .complectationTable {
     display: grid;
     margin: auto;
-    border-width: 1px;
-    border-color: #616161;
+    border: solid 1px #616161;
     font: normal small-caps 1em "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
@@ -637,7 +923,6 @@ body {
     border-bottom-color: #717171;
     border-bottom-style: solid;
     font-weight: 400;
-    font-size: 1.3em;
     white-space: nowrap;
 }
 
@@ -647,7 +932,6 @@ body {
     padding-left: 25px;
     box-sizing: border-box;
     font-weight: 100;
-    font-size: 1em;
 }
 
 .inGridUL {
@@ -666,12 +950,12 @@ li {
 }
 
 .stickyButtons {
-    position: fixed;
-    z-index: 6;
+    position: sticky;
     display: inline-block;
-    width: 100%;
     height: 200px;
+    left: 95%;
     bottom: 20%;
+    z-index: 7;
 
 }
 
@@ -681,12 +965,12 @@ li {
     flex-direction: column;
     justify-content: stretch;
     align-items: stretch;
-    width: 100%;
     height: 100%;
 }
 
 .stickyButtonsCover {
     position: absolute;
+    z-index: 0;
     height: 100%;
     width: 60px;
     right: 5%;
@@ -705,16 +989,18 @@ li {
 
 .stickyButtonsEl {
     position: absolute;
+    z-index: 7;
     height: 60px;
     width: 100%;
-    background-color: forestgreen;
+    min-width: 0;
+    background-color: green;
     display: flex;
     justify-content: left;
     align-items: center;
     overflow: hidden;
     border-style: hidden;
     border-width: 1px;
-    border-color: forestgreen;
+    border-color: green;
     border-radius: 30px;
     white-space: nowrap;
     cursor: pointer;
@@ -737,14 +1023,20 @@ li {
 #stickyButtonsImg1 {
     padding: 7px;
     padding-right: 10px;
+    min-width: 48px;
+    height: auto;
 }
 
 #stickyButtonsImg2 {
     padding: 15px;
+    min-width: 32px;
+    height: auto;
 }
 
 #stickyButtonsImg3 {
     padding: 7px;
+    min-width: 48px;
+    height: auto;
 }
 
 @keyframes widen {
@@ -763,5 +1055,134 @@ li {
     100% {
         width: 60px;
     }
+
 }
 
+footer {
+    display: grid;
+    background-color: forestgreen;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.footerGridElem {
+    margin-left: 25%;
+    color: white;
+}
+
+.footerHeader {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    font: normal 600 small-caps 1em "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.footerA span {
+    cursor: pointer;
+    color: inherit;
+}
+
+.footerA {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    font: normal 100 small-caps 0.85em "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: inherit;
+}
+
+.footerA:hover {
+    text-decoration: underline;
+}
+
+.MainContainer {
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: 150vh;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.MainContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.parallaxText {
+    position: relative;
+    display: block;
+    background-color: white;
+    z-index: 1;
+}
+
+.parallaxTextDiv {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 75px 0;
+}
+
+.pParal {
+    margin: 75px 0;
+    font: normal  1em "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 1.2em;
+}
+
+.parallaxImg {
+    display: flex;
+    flex: 1 0 auto;
+    position: relative;
+    z-index: -1;
+    justify-content: center;
+    align-items: center;
+    transform: translateZ(-1px) scale(2);
+    background-image: url("https://topgir.com.ua/wp-content/uploads/2020/07/oct1.jpg");
+    background-size: 100%;
+}
+
+.downloads {
+    background-color: forestgreen;
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.downloadsElClick {
+    display: block;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.downloadsElImg {
+    height: 65px;
+    width: auto;
+}
+
+.downloadsText {
+    font: normal small-caps 1.5em "Franklin Gothic Medium", serif;
+    color: white;
+}
+
+.safety {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.safetyHeader {
+    font: normal small-caps 1.5em "Franklin Gothic Medium", serif;
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+.safetyImg {
+    width: 250px;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+.safetyText {
+    font: normal small-caps 1.3em "Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin-bottom: -100px;
+}
