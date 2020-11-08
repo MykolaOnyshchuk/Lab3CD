@@ -793,6 +793,10 @@ main {
     cursor: pointer;
 }
 
+h2 {
+    display: none;
+}
+
 .AconfiguratorButton {
     text-align: center;
     margin: 0;
